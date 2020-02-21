@@ -21,11 +21,15 @@ namespace ConsoleClickerOne
             {
                 Console.Clear();
                 Console.WriteLine($"Clicks: {Clicks}");
-                Console.Write($"Press enter to click");
+                Console.WriteLine($"Press enter to click");
                 string input = Console.ReadLine();
                 if (input == "")
                 {
                     click(1);
+                }
+                else if (input.ToLower() == "done")
+                {
+                    GameOver = true;
                 }
             }
 
